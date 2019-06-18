@@ -52,6 +52,7 @@ extractResponse <- function(pp, feature){
     return(pp$content$responses$landmarkAnnotations[[1]])
   }
   if (feature == "WEB") {
+    print(pp$content$responses)
     return(pp$content$responses$webDetection[[1]])  
   }
 }
