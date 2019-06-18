@@ -36,6 +36,7 @@ imageToText <- function(imagePath) {
 #' @return a data frame
 #'
 extractResponse <- function(pp, feature){
+  print(pp)
   if (feature == "LABEL_DETECTION") {
     return(pp$content$responses$labelAnnotations[[1]])
   }
@@ -52,7 +53,6 @@ extractResponse <- function(pp, feature){
     return(pp$content$responses$landmarkAnnotations[[1]])
   }
   if (feature == "WEB") {
-    print(pp$content$responses)
     return(pp$content$responses$webDetection[[1]])  
   }
 }
